@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
+import { LocationsComponent } from './locations/locations.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LocationsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     UiModule
   ],
   providers: [],

@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { AppUIRoutingModule } from './app-ui-routing.module';
 @NgModule({
   declarations: [LayoutComponent, HeaderComponent, FooterComponent],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule, AppUIRoutingModule],
+  exports:[LayoutComponent]
 })
 export class UiModule { }
