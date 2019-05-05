@@ -18,13 +18,6 @@ locations: Location[] = [];
   ngOnInit() {
     console.log('oninot')
     this.getLocations().subscribe((result: Location[])=>{
-
-      const count=result.length;
-      console.log(count);
-      for(let i=0 ; i<count;i++){
-        console.log(result[i]);
-        result[i].id=i;
-      }
       this.locations=result;
     });
   }

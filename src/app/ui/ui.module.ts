@@ -9,8 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppUIRoutingModule } from './app-ui-routing.module';
 import {LocationsComponent} from "../locations/locations.component";
+import {LocationDetailComponent} from "../location-detail/location-detail.component";
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, FooterComponent, LocationsComponent],
+  declarations: [LayoutComponent, HeaderComponent, FooterComponent, LocationsComponent, LocationDetailComponent],
   imports: [CommonModule, AppUIRoutingModule, FormsModule, HttpClientModule,HttpClientInMemoryWebApiModule.forRoot(
     InMemoryDataService, { dataEncapsulation: false }
   )],

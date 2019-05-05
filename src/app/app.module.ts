@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
-import { LocationsComponent } from './locations/locations.component';
+
 
 @NgModule({
   declarations: [

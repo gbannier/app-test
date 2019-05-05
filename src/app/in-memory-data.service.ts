@@ -228,6 +228,12 @@ export class InMemoryDataService implements InMemoryDbService{
     "version": 0,
     "function": "RAIL_TERMINAL"
   }];
+    // add property id
+
+    const count=locations.length;
+    for(let i=0 ; i<count;i++){
+      locations[i]['id']=i;
+    }
 
     return {locations};
   }
