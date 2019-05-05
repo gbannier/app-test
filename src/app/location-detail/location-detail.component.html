@@ -1,11 +1,23 @@
-<div *ngIf="location">
-
-  <h2>{{location.name | uppercase}} Location Details</h2>
+<div class="container-fluid" *ngIf="location">
+  <h2> Location Details für {{location.name }}</h2>
   <div><span>id: </span>{{location.id}}</div>
-  <div>
+  <div class="col-1">
     <label>name:
       <input [(ngModel)]="location.name" placeholder="Name"/>
+    </label>
+    <label>Funktion:
       <input [(ngModel)]="location.function" placeholder="Funktion"/>
     </label>
+    <label>Stadt:
+      <input [(ngModel)]="location.address.city" placeholder="Adresse"/>
+    </label>
+    <label>Ressource Id:
+      <input [(ngModel)]="location.resourceId" placeholder="Ressource Id"/>
+    </label>
+    <label>Version:
+      <input [(ngModel)]="location.version" placeholder="Version"/>
+    </label>
   </div>
+  <button class="btn-primary" (click)="back()">Verwerfen</button>
+  <button  class="btn-primary" (click)="save()">Speichern</button>
 </div>

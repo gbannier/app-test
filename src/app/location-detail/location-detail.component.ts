@@ -26,4 +26,11 @@ export class LocationDetailComponent implements OnInit {
     return this.http.get<Location>(this.apiUrl+'/'+this.id)
   }
 
+  save(): void{
+       this.http.put(this.apiUrl, this.location).subscribe(()=>this.back());
+  }
+
+  back(){
+      this.loc.back();
+  }
 }
