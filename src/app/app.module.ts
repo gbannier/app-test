@@ -8,7 +8,6 @@ import { LocationsComponent } from './locations/locations.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LocationsComponent
   ],
   imports: [
     BrowserModule,
