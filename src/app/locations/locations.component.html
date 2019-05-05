@@ -1,3 +1,53 @@
-<p>
-  Ich bin das Location Component
-</p>
+<div class="container-fluid">
+  <div class=col-sm-12>
+    <h1 class="inline">Locations</h1>
+<!--    <button class="btn btn-default" (click)="addEmployee()">Add</button>-->
+  </div>
+
+<div class="row">
+  <div class="col-sm-8">
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Funktion</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+<!--      <tr *ngFor="#employee of employes" (click)="onSelect(employee)"-->
+<!--               [class.selected]="employee === selectedEmployee">-->
+<!--        <th scope="row">{{employee.id}}</th>-->
+<!--        <td>{{employee.firstName}}</td>-->
+<!--        <td>{{employee.lastName}}</td>-->
+<!--        <td>{{employee.email}}</td>-->
+<!--        <td><button class="btn btn-sm btn-danger" (click)="removeEmployee(employee)">X</button></td>-->
+<!--      </tr>-->
+      <tr *ngFor="let location of locations">
+        <td>{{location.id}}</td>
+        <td>{{location.name}}</td>
+        <td>{{location.function}}</td>
+      </tr>
+      <tr>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<!--  <div *ngIf="selectedEmployee" class="col-sm-4" >-->
+<!--    <h2 class="inline">{{selectedEmployee.firstName}} {{selectedEmployee.lastName}} Details</h2>-->
+<!--    <button class="btn btn-default" (click)="onSelectedClose()">Ok</button>-->
+<!--    <div><label>id: </label>{{selectedEmployee.id}}</div>-->
+<!--    <div>-->
+<!--      <label>First Name: </label>-->
+<!--      <input class="form-control" [(ngModel)]="selectedEmployee.firstName" placeholder="First name"/>-->
+<!--      <br>-->
+<!--      <label>Last Name: </label>-->
+<!--      <input class="form-control" [(ngModel)]="selectedEmployee.lastName" placeholder="Last name"/>-->
+<!--      <br>-->
+<!--      <label>Email: </label>-->
+<!--      <input class="form-control" [(ngModel)]="selectedEmployee.email" placeholder="email"/>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>
+</div>
