@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 // import { catchError, map, tap } from 'rxjs/operators';
 import {Location} from "./models/location";
 import {Observable} from "rxjs";
@@ -16,7 +16,6 @@ locations: Location[] = [];
   constructor( private http: HttpClient){ }
 
   ngOnInit() {
-    console.log('oninot')
     this.getLocations().subscribe((result: Location[])=>{
       this.locations=result;
     });
