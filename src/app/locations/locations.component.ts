@@ -13,6 +13,7 @@ export class LocationsComponent implements OnInit {
 locations: Location[] = [];
 // apiUrl='https://arviem-api.us-east-1.elasticbeanstalk.com/tenant1/locations';
   apiUrl='api/locations';
+  desc: boolean[] = [];
   constructor( private http: HttpClient){ }
 
   ngOnInit() {
@@ -23,6 +24,16 @@ locations: Location[] = [];
 
   getLocations(): Observable<any>{
      return this.http.get(this.apiUrl);
- }
 
+  }
+
+  sort(property: string) {
+    this.locations.sort((a, b) => {
+      const sort = (a[property] > b[property] ? 1 : a[property] < b[property] ? -1 : 0);
+      return this.desc[property] ? sort * -1 : sort;
+    });
+    this.desc[property] = !this.desc[property];
+  }
 }
+
+

@@ -10,8 +10,8 @@
       <thead>
       <tr>
         <th>Id</th>
-        <th>Name</th>
-        <th>Funktion</th>
+        <th (click)="sort('name')">Name</th>
+        <th (click)="sort('function')">Funktion</th>
         <th>Details</th>
       </tr>
       </thead>
@@ -37,20 +37,6 @@
       </tbody>
     </table>
   </div>
-<!--  <div *ngIf="selectedEmployee" class="col-sm-4" >-->
-<!--    <h2 class="inline">{{selectedEmployee.firstName}} {{selectedEmployee.lastName}} Details</h2>-->
-<!--    <button class="btn btn-default" (click)="onSelectedClose()">Ok</button>-->
-<!--    <div><label>id: </label>{{selectedEmployee.id}}</div>-->
-<!--    <div>-->
-<!--      <label>First Name: </label>-->
-<!--      <input class="form-control" [(ngModel)]="selectedEmployee.firstName" placeholder="First name"/>-->
-<!--      <br>-->
-<!--      <label>Last Name: </label>-->
-<!--      <input class="form-control" [(ngModel)]="selectedEmployee.lastName" placeholder="Last name"/>-->
-<!--      <br>-->
-<!--      <label>Email: </label>-->
-<!--      <input class="form-control" [(ngModel)]="selectedEmployee.email" placeholder="email"/>-->
-<!--    </div>-->
-<!--  </div>-->
+
 </div>
 </div>
