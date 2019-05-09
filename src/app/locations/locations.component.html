@@ -9,21 +9,13 @@
     <table class="table table-hover">
       <thead>
       <tr>
-        <th>Id</th>
+        <th (click)="sort('id')">Id</th>
         <th (click)="sort('name')">Name</th>
         <th (click)="sort('function')">Funktion</th>
         <th>Details</th>
       </tr>
       </thead>
       <tbody>
-<!--      <tr *ngFor="#employee of employes" (click)="onSelect(employee)"-->
-<!--               [class.selected]="employee === selectedEmployee">-->
-<!--        <th scope="row">{{employee.id}}</th>-->
-<!--        <td>{{employee.firstName}}</td>-->
-<!--        <td>{{employee.lastName}}</td>-->
-<!--        <td>{{employee.email}}</td>-->
-<!--        <td><button class="btn btn-sm btn-danger" (click)="removeEmployee(employee)">X</button></td>-->
-<!--      </tr>-->
       <tr *ngFor="let location of locations">
         <td>{{location.id}}</td>
         <td>{{location.name}}</td>

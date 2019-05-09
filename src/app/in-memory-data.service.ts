@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Location } from './locations/models/location';
+import {Injectable} from '@angular/core';
+import {InMemoryDbService} from 'angular-in-memory-web-api';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -231,8 +231,8 @@ export class InMemoryDataService implements InMemoryDbService{
     // add property id
 
     const count=locations.length;
-    for(let i=0 ; i<count;i++){
-      locations[i]['id']=i;
+    for (let i = 0; i < count; i++) {
+      locations[i]['id'] = i * 5;
     }
 
     return {locations};
